@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="iconmonstr-car-2-240.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fav Cars</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Custom styles for transparent navbar */
+        .navbar {
+            background-color: transparent !important;
+            backdrop-filter: blur(10px); /* Add backdrop-filter for a blurry effect */
+        }
+
+        .navbar-brand {
+            color: white; /* Set color of navbar text */
+        }
+
+        .nav-link {
+            color: white !important; /* Set color of navigation links */
+        }
+        .card {
+            background-color: transparent !important;
+            border: none; /* Remove border */
+        }
+
+        .card-body {
+            color: white; /* Set color of card text */
+        }
+        .card-title {
+            color:black;
+        }
+        .card-text {
+            font-family:serif;
+            color:black;
+        }
+        .navbar-brand { 
+            color : black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .nav-link {
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        select{
+            position: absolute;
+            top : 15;
+            left : 46%;
+            background-color :deepskyblue;
+            border-color:darkmagenta;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body style="padding-top: 56px;background: linear-gradient(purple, red, green);">
+    <select id="lang-select" onchange="changeLanguage()">
+        <option value="eng">English</option>
+        <option value="hin">Hindi</option>
+    </select>
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3" style="position: fixed;top: 0;width: 100%;z-index: 1000;">
+    <a class="navbar-brand" href="#" id="title">Cars</a>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading1">1</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading2">2</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" id="a">more</a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#scrollspyHeading3">3</a></li>
+            <li><a class="dropdown-item" href="#scrollspyHeading4">4</a></li>
+            <li><a class="dropdown-item" href="#scrollspyHeading5">5</a></li>
+        </ul>
+        </li>
+    </ul>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-0" tabindex="0" style="background: linear-gradient(purple, red, green);">
+    <h4 id="scrollspyHeading1"></h4>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <img src="https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/800x450/format/jpg/quality/85/https://s.yimg.com/os/creatr-uploaded-images/2021-05/7f61aa30-af7a-11eb-af47-808c2b9c563f" class="card-img-top" alt="...">
+                <div class="card-body" style="background-color: aqua;">
+                    <h5 class="card-title" id="para1">1</h5>
+                    <p class="card-text" id="para2">SSC Tuatara</p> 
+                    <p style="color: brown;" id="para3">Top Speed : 295 mph</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/2015_Koenigsegg_Agera_N_%2819886243212%29.jpg/800px-2015_Koenigsegg_Agera_N_%2819886243212%29.jpg" class="card-img-top" alt="...">
+                <div class="card-body" style="background-color:aqua;">
+                    <h5 class="card-title" id="para4">2</h5>
+                    <p class="card-text" id="para5">Koenigsegg Agera</p>
+                    <p style="color: brown;" id="para6"> Top Speed : 273 mph</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h4 id="scrollspyHeading2"></h4>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <img src="https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/800x450/format/jpg/quality/85/http://s.aolcdn.com/commerce/blogcdn/www.autoblog.com/media/2010/07/track11.jpg" class="card-img-top" alt="...">
+                <div class="card-body" style="background-color:aqua;">
+                    <h5 class="card-title" id="para7">3</h5>
+                    <p class="card-text" id="para8">Bugatti Veyron</p> 
+                    <p style="color: brown;" id="para9">Top Speed : 267.856 mph</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <img src="https://w0.peakpx.com/wallpaper/280/272/HD-wallpaper-rimac-nevera-2021-3-cars.jpg" class="card-img-top" alt="..." style="height: 267px">
+                <div class="card-body" style="background-color:aqua;">
+                    <h5 class="card-title" id="para10">4</h5>
+                    <p class="card-text" id="para11">Rimac Nevera</p>
+                    <p style="color: brown;" id="para12">Top Speed : 256 mph</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h4 id="scrollspyHeading3"></h4>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <img src="https://media.licdn.com/dms/image/sync/D4D27AQErGfRtAas-6g/articleshare-shrink_800/0/1709147349027?e=2147483647&v=beta&t=OjBMox0lyqfIbqdVklv8d1oqmYF6QzC-YPJyCXLT-9k" class="card-img-top" alt="...">
+                <div class="card-body" style="background-color:aqua;">
+                    <h5 class="card-title" id="para13">5</h5>
+                    <p class="card-text" id="para14">Aston Martin Valkyrie </p>
+                    <p style="color: brown;" id="para15">Top Speed : 250 mph</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <img src="https://robbreport.com/wp-content/uploads/2024/01/speedtail05.jpg?w=800" class="card-img-top" alt="...">
+                <div class="card-body" style="background-color:aqua;">
+                    <h5 class="card-title" id="para16">6</h5>
+                    <p class="card-text" id="para17">McLaren Speedtail</p> 
+                    <p style="color: brown;" id="para18">Top Speed : 250 mph</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h4 id="scrollspyHeading4"></h4>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <img src="https://o.aolcdn.com/images/dims3/GLOB/crop/1920x1080+0+0/resize/800x450!/format/jpg/quality/85/http://o.aolcdn.com/hss/storage/midas/72d26f7b355758fda034ae86a47a3f35/204226066/01-pagani-huayra-bc-quail.jpg" class="card-img-top" alt="...">
+                <div class="card-body" style="background-color:aqua;">
+                    <h5 class="card-title" id="para19">7</h5>
+                    <p class="card-text" id="para20">Pagani Huayra BC</p> 
+                    <p style="color: brown;" id="para21">Top Speed : 238 mph</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/164479/lamborghini-aventador-left-front-three-quarter2.jpeg?isig=0&wm=0" class="card-img-top" alt="...">
+                <div class="card-body" style="background-color:aqua;">
+                    <h5 class="card-title" id="para22">8</h5>
+                    <p class="card-text" id="para23">Lamborgini Revuelto</p> 
+                    <p style="color: brown;" id="para24">Top Speed : 217 mph</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h4 id="scrollspyHeading5"></h4>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <img src="https://www.tuningblog.eu/wp-content/uploads/2015/08/Ferrari-488-Speciale-Spider2-1.jpg" class="card-img-top" alt="..." style="height: 267px">
+                <div class="card-body" style="background-color:aqua;">
+                    <h5 class="card-title" id="para25">9</h5>
+                    <p class="card-text" id="para26">Ferrari 418 spyder</p>
+                    <p style="color: brown;" id="para27">Top Speed : 210 mph</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <img src="https://robbreport.com/wp-content/uploads/2018/03/2017-08-04-h-apollo-01-0060m1.jpg?w=800" class="card-img-top" alt="..." style="height: 267px">
+                <div class="card-body" style="background-color:aqua;">
+                    <h5 class="card-title" id="para28">10</h5>
+                    <p class="card-text" id="para29">Apollo Intensa</p>
+                    <p style="color: brown;" id="para30">Top Speed : 208 mph</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function changeLanguage(){
+            var lang = document.getElementById("lang-select").value;
+            var title = document.getElementById("title");
+            var nav = document.getElementById("a");           
+            //var displaytext1 = document.getElementById("para1");
+            var displaytext2 = document.getElementById("para2");
+            var displaytext3 = document.getElementById("para3");
+            //var displaytext4 = document.getElementById("para4");
+            var displaytext5 = document.getElementById("para5");
+            var displaytext6 = document.getElementById("para6");
+            //var displaytext7 = document.getElementById("para7");
+            var displaytext8 = document.getElementById("para8");
+            var displaytext9 = document.getElementById("para9");
+            //var displaytext10 = document.getElementById("para10");
+            var displaytext11 = document.getElementById("para11");
+            var displaytext12 = document.getElementById("para12");
+            //var displaytext13 = document.getElementById("para13");
+            var displaytext14 = document.getElementById("para14");
+            var displaytext15 = document.getElementById("para15");
+            //var displaytext16 = document.getElementById("para16");
+            var displaytext17 = document.getElementById("para17");
+            var displaytext18 = document.getElementById("para18");
+            //var displaytext19 = document.getElementById("para19");
+            var displaytext20 = document.getElementById("para20");
+            var displaytext21 = document.getElementById("para21");
+            //var displaytext22 = document.getElementById("para22");
+            var displaytext23 = document.getElementById("para23");
+            var displaytext24 = document.getElementById("para24");
+            //var displaytext25 = document.getElementById("para25");
+            var displaytext26 = document.getElementById("para26");
+            var displaytext27 = document.getElementById("para27");
+            //var displaytext28 = document.getElementById("para28");
+            var displaytext29 = document.getElementById("para29");
+            var displaytext30 = document.getElementById("para30");
+            switch(lang){
+                case "eng":
+                nav.innerText = "more";
+                title.innerText = "Cars";
+                displaytext2.innerText = "SSC Tuatara";
+                displaytext3.innerText = "Top Speed : 295 mph";
+                displaytext5.innerText = "Koenigsegg Agera";
+                displaytext6.innerText = "Top Speed : 273 mph";
+                displaytext8.innerText = "Bugatti Veyron";
+                displaytext9.innerText = "Top Speed : 267.856 mph";
+                displaytext11.innerText = "Rimac Nevera";
+                displaytext12.innerText = "Top Speed : 256 mph";
+                displaytext14.innerText = "Aston Martin Valkyrie ";
+                displaytext15.innerText = "Top Speed : 250 mph";
+                displaytext17.innerText = "McLaren Speedtail";
+                displaytext18.innerText = "Top Speed : 250 mph";
+                displaytext20.innerText = "Pagani Huayra BC";
+                displaytext21.innerText = "Top Speed : 238 mph";
+                displaytext23.innerText = "Lamborgini Revuelto";
+                displaytext24.innerText = "Top Speed : 217 mph";
+                displaytext26.innerText = "Ferrari 418 spyder";
+                displaytext27.innerText = "Top Speed : 210 mph";
+                displaytext29.innerText = "Apollo Intensa";
+                displaytext30.innerText = "Top Speed : 208 mph";
+                break;
+                case "hin":
+                nav.innerText = "अधिक";
+                title.innerText = "कार";
+                displaytext2.innerText = "एसएससी तुतारा";
+                displaytext3.innerText = "शीर्ष गति: 295 एमपीएच";
+                displaytext5.innerText = "कोएनिगसेग एगेरा";
+                displaytext6.innerText = "शीर्ष गति: 273 एमपीएच";
+                displaytext8.innerText = "बुगाटी वेरॉन";
+                displaytext9.innerText = "शीर्ष गति: 267.856 एमपीएच";
+                displaytext11.innerText = "रिमाक नेवेरा";
+                displaytext12.innerText = "शीर्ष गति: 256 एमपीएच";
+                displaytext14.innerText = "एस्टन मार्टिन वाल्किरी";
+                displaytext15.innerText = "शीर्ष गति: 250 एमपीएच";
+                displaytext17.innerText = "मैकलारेन स्पीडटेल";
+                displaytext18.innerText = "शीर्ष गति: 250 एमपीएच";
+                displaytext20.innerText = "पगानी हुयरा बीसी";
+                displaytext21.innerText = "शीर्ष गति: 238 एमपीएच";
+                displaytext23.innerText = "लेम्बोर्गिनी रेवुएल्टो";
+                displaytext24.innerText = "शीर्ष गति: 217 एमपीएच";
+                displaytext26.innerText = "फेरारी 418 स्पाइडर";
+                displaytext27.innerText = "शीर्ष गति: 210 एमपीएच";
+                displaytext29.innerText = "अपोलो इंटेन्सा";
+                displaytext30.innerText = "शीर्ष गति: 208 एमपीएच";
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
